@@ -1,0 +1,10 @@
+﻿<div class="row" ng-show="resultsActive">
+    <div>
+        <h2>{{message}}</h2>
+    </div>
+    <div>
+        <h3>Your Score: {{playerScore}} </h3>
+        <h2><b>{{score | number}}pts</b></h2>
+        <a href="#/"><button class="btn btn-lg btn-success" ng-show="resultsActive" ng-click="finalizeQuiz()">Back To Home</button></a>
+    </div>   
+</div>
