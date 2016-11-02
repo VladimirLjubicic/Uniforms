@@ -1,7 +1,7 @@
 ﻿<div ng-controller="quizCtrl">
     <div ng-if="quizStateService.quizActive && !quizStateService.resultsActive && questionElements.length === 4">
         <div style="color:darkslategrey;">
-            <h3><b>daScore: {{resultsService.score}}</b></h3>
+            <h3><b>Score: {{resultsService.score}}</b></h3>
             <h3 style="color:darkred"><b>{{timeCounter*10 | number}}s</b></h3>
         </div>
         <div class="well well-sm">
@@ -12,7 +12,7 @@
                         <div ng-repeat="c in questionElements track by $index">
                             <div class="col-xs-6">
                                 <div class="image-answer glowing-border">
-                                    <img ng-click="evaluateAnswers(c.Uniform)" ng-src="{{c.Uniform}}" width="300" />
+                                    <img ng-click="evaluateAnswers(c.Uniform)" ng-src="{{c.Uniform}}" />
                                 </div>
                             </div>
                         </div>

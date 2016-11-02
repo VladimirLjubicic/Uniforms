@@ -9,7 +9,7 @@
                 var play;
                 $scope.quizStateService = quizStateService;
                 $scope.start = function () {
-                    if (true) {
+                    if (play) {
                         quizStateService.changeState('quiz', true);
                         $location.url('quiz');
                     } else {
