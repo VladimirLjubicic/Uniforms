@@ -1,22 +1,24 @@
-﻿<div class="container">
-    <div ng-if="quizActive">
-        <div style="color:darkred">
-            <h3><b>{{timeCounter*10 | number}}s</b></h3>
+﻿<div ng-controller="quizCtrl">
+    <div ng-if="quizStateService.quizActive && !quizStateService.resultsActive && questionElements.length === 4">
+        <div style="color:darkslategrey;">
+            <h3><b>daScore: {{resultsService.score}}</b></h3>
+            <h3 style="color:darkred"><b>{{timeCounter*10 | number}}s</b></h3>
         </div>
         <div class="well well-sm">
             <div class="row">
                 <div class="col-xs-12">
-                    <h4><b>{{questionCounter}}. What is the uniform of {{questionTitle.Name}}?</b></h4>
+                    <h4><b>{{resultsService.questionCounter}}. What is the uniform of {{questionTitle.Name}}?</b></h4>
                     <div class="row">
-                        <div class="col-xs-6" ng-repeat="c in questionElements">
-                            <div class="image-answer glowing-border">
-                                <img ng-click="evaluateAnswers(c.Uniform)" ng-src="{{c.Uniform}}" width="300" />
+                        <div ng-repeat="c in questionElements track by $index">
+                            <div class="col-xs-6">
+                                <div class="image-answer glowing-border">
+                                    <img ng-click="evaluateAnswers(c.Uniform)" ng-src="{{c.Uniform}}" width="300" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <h4>{{score}}</h4>
     </div>
 </div>

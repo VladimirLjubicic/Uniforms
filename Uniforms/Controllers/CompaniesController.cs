@@ -22,8 +22,8 @@ namespace Uniforms.Controllers
         }
 
         public ActionResult IndexJs()
-        {
-            return Json(db.Company.ToList(), JsonRequestBehavior.AllowGet);
+        {            
+            return Json(db.Company.ToList(), JsonRequestBehavior.AllowGet);            
         }
 
         // GET: Companies/Details/5

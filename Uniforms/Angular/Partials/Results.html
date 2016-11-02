@@ -1,10 +1,12 @@
-﻿<div class="row" ng-show="resultsActive">
-    <div>
-        <h2>{{message}}</h2>
+﻿<div ng-controller="resultsCtrl">
+    <div class="row" ng-show="quizStateService.resultsActive && !quizStateService.quizActive">
+        <div>
+            <h2>{{message}}</h2>
+        </div>
+        <div>
+            <h3>Your Score: {{playerScore}} </h3>
+            <h2><b>{{resultsService.score | number}}pts</b></h2>                        
+            <button class="btn btn-lg btn-success" ng-show="quizStateService.resultsActive" ng-click="finalizeQuiz()">Home</button>
+        </div>
     </div>
-    <div>
-        <h3>Your Score: {{playerScore}} </h3>
-        <h2><b>{{score | number}}pts</b></h2>
-        <a href="#/"><button class="btn btn-lg btn-success" ng-show="resultsActive" ng-click="finalizeQuiz()">Back To Home</button></a>
-    </div>   
-</div>
+</div>   

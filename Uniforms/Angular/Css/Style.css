@@ -21,7 +21,3 @@ background-color: darkgrey;
 .pdng{
     padding-top: 30px;
 }
-.moje{
-    data-toggle: modal;
-    data-target: #myModal;
-}

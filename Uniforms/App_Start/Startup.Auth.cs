@@ -54,9 +54,9 @@ namespace Uniforms
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1833366153575850",
+               appSecret: "b10ccf4f5e2ac182815a5be60d3008a7");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
